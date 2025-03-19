@@ -1,1 +1,1 @@
-Deployed link = 
+Deployed link = https://ca-3-backend-qcgt.onrender.com

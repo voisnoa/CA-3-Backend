@@ -10,10 +10,10 @@ PORT = 8808
 
 app.use(express.json())
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(
-        console.log('MONGO is running')
-    )
+// mongoose.connect(process.env.MONGO_URI)
+//     .then(
+//         console.log('MONGO is running')
+//     )
 
 app.post("/login" , async (req,res) =>{
 
