@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
         console.log('MONGO is running')
     )
 
-app.post("/login" , (req,res) =>{
+app.post("/login" , async (req,res) =>{
 
     try{
         const {email , password} = req.body
@@ -34,9 +34,12 @@ app.post("/login" , (req,res) =>{
 
         res.status(201).json({message : "User is successfully logged in"})
     }
+    
     catch{
-        res.status(404).json({message: "Wrong email or password"})
+        res.status(404).json({message: "Email or password cannot be empty"})
     }
 })
+
+app.listen(PORT , console.log(`Website is running on http://localhost:${PORT}`))
 
 
